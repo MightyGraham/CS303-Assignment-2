@@ -18,8 +18,10 @@ private: //only accessible inside class
 	size_t num_items;
 
 public: //accessible everywhere else
+	//Constructors
 	SinglyList();
 	~SinglyList();
+
 	void push_front(int item);
 	void push_back(int item);
 	void pop_front();

@@ -43,8 +43,8 @@ void SinglyList::push_back(int item) { //add to the back of list
     num_items++; //iterate
 }
 
-void SinglyList::pop_front() {
-    if (empty()) throw std::underflow_error("List is empty");
+void SinglyList::pop_front() { 
+    if (empty()) throw std::underflow_error("The list is empty"); // throws error if the list is empty or num_items = 0
 
     Node* temp = head;
     head = head->next;
@@ -55,7 +55,7 @@ void SinglyList::pop_front() {
 }
 
 void SinglyList::pop_back() {
-    if (empty()) throw std::underflow_error("List is empty");
+    if (empty()) throw std::underflow_error("The list is empty");
 
     if (head == tail) { // only one item in the list
         delete head;
@@ -74,13 +74,13 @@ void SinglyList::pop_back() {
     num_items--;
 }
 
-int SinglyList::front() const {
-    if (empty()) throw std::underflow_error("List is empty");
+int SinglyList::front() const { //returns front/first node
+    if (empty()) throw std::underflow_error("The list is empty");
     return head->data;
 }
 
-int SinglyList::back() const {
-    if (empty()) throw std::underflow_error("List is empty");
+int SinglyList::back() const {  //returns last/back node
+    if (empty()) throw std::underflow_error("The list is empty");
     return tail->data;
 }
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
